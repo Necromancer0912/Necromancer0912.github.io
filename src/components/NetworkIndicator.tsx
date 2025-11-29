@@ -11,13 +11,12 @@ export function NetworkIndicator({ isDarkMode = true }: NetworkIndicatorProps) {
       initial={{ opacity: 0 }}
       animate={{ opacity: 1 }}
       transition={{ delay: 1 }}
-      className="fixed top-24 left-8 z-30 hidden xl:block"
+      className="fixed top-20 right-8 z-30 hidden xl:block"
     >
-      <div className={`backdrop-blur-xl rounded-lg px-3 py-2 border shadow-xl ${
-        isDarkMode 
-          ? 'bg-slate-900/80 border-slate-700/50' 
-          : 'bg-white/90 border-slate-300'
-      }`}>
+      <div className={`backdrop-blur-xl rounded-lg px-3 py-2 border shadow-xl ${isDarkMode
+        ? 'bg-slate-900/80 border-slate-700/50'
+        : 'bg-white/90 border-slate-300'
+        }`}>
         <div className="flex items-center gap-2">
           <motion.div
             animate={{

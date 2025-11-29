@@ -18,7 +18,7 @@ export function Hero({ isDarkMode }: HeroProps) {
     <section id="hero" className="min-h-screen flex items-center pt-16 px-6 lg:px-8 relative overflow-hidden">
       {/* Animated grid background */}
       <div className="absolute inset-0 grid-bg opacity-30" />
-      
+
       {/* Subtle gradient orbs */}
       <motion.div
         className="absolute top-20 right-20 w-96 h-96 bg-cyan-500/5 rounded-full blur-3xl"
@@ -76,9 +76,9 @@ export function Hero({ isDarkMode }: HeroProps) {
               {showTerminal ? (
                 <>
                   <span style={{ fontWeight: 900 }}>Hi, I'm <span className="gradient-text glitch-effect">Sayan</span>
-                  {'. '}</span>
-                  <TypingEffect 
-                    text="I build interfaces & intelligent systems." 
+                    {'. '}</span>
+                  <TypingEffect
+                    text="I build interfaces & intelligent systems."
                     speed={40}
                     delay={500}
                     style={{ fontWeight: 900 }}
@@ -95,9 +95,8 @@ export function Hero({ isDarkMode }: HeroProps) {
               transition={{ delay: 0.8 }}
               className="mb-6 font-mono"
             >
-              <div className={`rounded-lg p-3 border-l-2 border-cyan-400 inline-block ${
-                isDarkMode ? 'glass-strong' : 'bg-white/80 backdrop-blur-sm shadow-lg'
-              }`}>
+              <div className={`rounded-lg p-3 border-l-2 border-cyan-400 inline-block ${isDarkMode ? 'glass-strong' : 'bg-white/80 backdrop-blur-sm shadow-lg'
+                }`}>
                 <p className="text-sm text-cyan-600">
                   <span className={isDarkMode ? 'text-slate-500' : 'text-slate-600'}>$</span> role: <span className="text-emerald-600">\"AI/ML Researcher | Full-Stack Developer\"</span>
                 </p>
@@ -110,15 +109,13 @@ export function Hero({ isDarkMode }: HeroProps) {
               transition={{ delay: 1 }}
               className="mb-8 font-mono text-sm max-w-xl"
             >
-              <div className={`rounded-xl p-5 border relative overflow-hidden ${
-                isDarkMode 
-                  ? 'glass-strong border-indigo-500/30' 
+              <div className={`rounded-xl p-5 border relative overflow-hidden ${isDarkMode
+                  ? 'glass-strong border-indigo-500/30'
                   : 'bg-white/90 backdrop-blur-sm shadow-xl border-indigo-300/50'
-              }`}>
-                {/* Code editor style header */}
-                <div className={`flex items-center gap-2 mb-3 pb-3 border-b ${
-                  isDarkMode ? 'border-slate-700/50' : 'border-slate-200'
                 }`}>
+                {/* Code editor style header */}
+                <div className={`flex items-center gap-2 mb-3 pb-3 border-b ${isDarkMode ? 'border-slate-700/50' : 'border-slate-200'
+                  }`}>
                   <div className="flex gap-1.5">
                     <div className="w-3 h-3 rounded-full bg-red-500/60" />
                     <div className="w-3 h-3 rounded-full bg-yellow-500/60" />
@@ -126,25 +123,25 @@ export function Hero({ isDarkMode }: HeroProps) {
                   </div>
                   <span className={`text-xs ml-2 ${isDarkMode ? 'text-slate-500' : 'text-slate-600'}`}>credentials.json</span>
                 </div>
-                
+
                 <div className={`space-y-2 leading-relaxed ${isDarkMode ? 'text-slate-400' : 'text-slate-700'}`}>
                   <div>
                     <span className={`select-none ${isDarkMode ? 'text-slate-600' : 'text-slate-400'}`}>01 │ </span>
-                    <span className={isDarkMode ? 'text-purple-400' : 'text-purple-600'}>const</span> <span className={isDarkMode ? 'text-blue-400' : 'text-blue-600'}>education</span> = 
+                    <span className={isDarkMode ? 'text-purple-400' : 'text-purple-600'}>const</span> <span className={isDarkMode ? 'text-blue-400' : 'text-blue-600'}>education</span> =
                     <span className={isDarkMode ? 'text-emerald-400' : 'text-emerald-600'}> "M.Tech @ IIIT Delhi"</span>;
                   </div>
                   <div>
                     <span className={`select-none ${isDarkMode ? 'text-slate-600' : 'text-slate-400'}`}>02 │ </span>
                     <span className={isDarkMode ? 'text-purple-400' : 'text-purple-600'}>const</span> <span className={isDarkMode ? 'text-blue-400' : 'text-blue-600'}>skills</span> = [
-                    <span className={isDarkMode ? 'text-cyan-400' : 'text-cyan-600'}>"NLP"</span>, 
-                    <span className={isDarkMode ? 'text-cyan-400' : 'text-cyan-600'}> "Computer Vision"</span>, 
+                    <span className={isDarkMode ? 'text-cyan-400' : 'text-cyan-600'}>"NLP"</span>,
+                    <span className={isDarkMode ? 'text-cyan-400' : 'text-cyan-600'}> "Computer Vision"</span>,
                     <span className={isDarkMode ? 'text-cyan-400' : 'text-cyan-600'}> "AI"</span>];
                   </div>
                   <div>
                     <span className={`select-none ${isDarkMode ? 'text-slate-600' : 'text-slate-400'}`}>03 │ </span>
                     <span className={isDarkMode ? 'text-purple-400' : 'text-purple-600'}>const</span> <span className={isDarkMode ? 'text-blue-400' : 'text-blue-600'}>fullstack</span> = [
-                    <span className={isDarkMode ? 'text-emerald-400' : 'text-emerald-600'}>"React"</span>, 
-                    <span className={isDarkMode ? 'text-emerald-400' : 'text-emerald-600'}> "Node.js"</span>, 
+                    <span className={isDarkMode ? 'text-emerald-400' : 'text-emerald-600'}>"React"</span>,
+                    <span className={isDarkMode ? 'text-emerald-400' : 'text-emerald-600'}> "Node.js"</span>,
                     <span className={isDarkMode ? 'text-emerald-400' : 'text-emerald-600'}> "MongoDB"</span>];
                   </div>
                 </div>
@@ -162,16 +159,14 @@ export function Hero({ isDarkMode }: HeroProps) {
             >
               <a
                 href="#projects"
-                className={`group flex items-center gap-2 px-6 py-3 rounded-xl backdrop-blur-xl font-semibold text-sm transition-all hover:scale-105 hover:-translate-y-1 relative overflow-hidden ${
-                  isDarkMode 
-                    ? 'bg-gradient-to-r from-cyan-500/20 to-indigo-500/20 border border-cyan-400/30 text-white shadow-glow-cyan hover:shadow-glow-cyan hover:border-cyan-400/60' 
+                className={`group flex items-center gap-2 px-6 py-3 rounded-xl backdrop-blur-xl font-semibold text-sm transition-all hover:scale-105 hover:-translate-y-1 relative overflow-hidden ${isDarkMode
+                    ? 'bg-gradient-to-r from-cyan-500/20 to-indigo-500/20 border border-cyan-400/30 text-white shadow-glow-cyan hover:shadow-glow-cyan hover:border-cyan-400/60'
                     : 'bg-gradient-to-r from-cyan-500 to-indigo-500 text-white shadow-lg hover:shadow-xl border border-cyan-600'
-                }`}
+                  }`}
               >
                 <motion.div
-                  className={`absolute inset-0 bg-gradient-to-r from-transparent to-transparent ${
-                    isDarkMode ? 'via-white/20' : 'via-white/30'
-                  }`}
+                  className={`absolute inset-0 bg-gradient-to-r from-transparent to-transparent ${isDarkMode ? 'via-white/20' : 'via-white/30'
+                    }`}
                   initial={{ x: '-100%' }}
                   whileHover={{ x: '100%' }}
                   transition={{ duration: 0.5 }}
@@ -180,14 +175,13 @@ export function Hero({ isDarkMode }: HeroProps) {
                 <span className="relative z-10">view_projects()</span>
                 <ArrowRight size={18} className="group-hover:translate-x-1 transition-transform relative z-10" />
               </a>
-              
+
               <a
                 href="#contact"
-                className={`group flex items-center gap-2 px-6 py-3 rounded-xl backdrop-blur-xl font-semibold text-sm transition-all hover:scale-105 hover:-translate-y-1 border relative overflow-hidden ${
-                  isDarkMode 
-                    ? 'bg-white/5 hover:bg-white/10 text-white border-slate-700/50 hover:border-emerald-400/50 hover:shadow-glow-green' 
+                className={`group flex items-center gap-2 px-6 py-3 rounded-xl backdrop-blur-xl font-semibold text-sm transition-all hover:scale-105 hover:-translate-y-1 border relative overflow-hidden ${isDarkMode
+                    ? 'bg-white/5 hover:bg-white/10 text-white border-slate-700/50 hover:border-emerald-400/50 hover:shadow-glow-green'
                     : 'bg-white text-slate-900 border-slate-300 hover:border-emerald-500 shadow-md hover:shadow-lg'
-                }`}
+                  }`}
               >
                 <div className={`absolute inset-0 bg-gradient-to-r from-emerald-500/0 to-emerald-500/10 opacity-0 group-hover:opacity-100 transition-opacity`} />
                 <span className="text-emerald-400 relative z-10">$</span>
@@ -205,33 +199,30 @@ export function Hero({ isDarkMode }: HeroProps) {
                 href="https://github.com/Necromancer0912"
                 target="_blank"
                 rel="noopener noreferrer"
-                className={`p-3 rounded-xl transition-all hover:scale-110 border ${
-                  isDarkMode 
-                    ? 'glass hover:bg-white/10 text-slate-400 hover:text-cyan-400 border-slate-700/50 hover:border-cyan-400/50' 
+                className={`p-3 rounded-xl transition-all hover:scale-110 border ${isDarkMode
+                    ? 'glass hover:bg-white/10 text-slate-400 hover:text-cyan-400 border-slate-700/50 hover:border-cyan-400/50'
                     : 'bg-white text-slate-600 hover:text-cyan-600 border-slate-300 hover:border-cyan-500 shadow-md hover:shadow-lg'
-                }`}
+                  }`}
               >
                 <Github size={20} />
               </a>
               <a
                 href="mailto:sayan20012002@gmail.com"
-                className={`p-3 rounded-xl transition-all hover:scale-110 border ${
-                  isDarkMode 
-                    ? 'glass hover:bg-white/10 text-slate-400 hover:text-cyan-400 border-slate-700/50 hover:border-cyan-400/50' 
+                className={`p-3 rounded-xl transition-all hover:scale-110 border ${isDarkMode
+                    ? 'glass hover:bg-white/10 text-slate-400 hover:text-cyan-400 border-slate-700/50 hover:border-cyan-400/50'
                     : 'bg-white text-slate-600 hover:text-cyan-600 border-slate-300 hover:border-cyan-500 shadow-md hover:shadow-lg'
-                }`}
+                  }`}
               >
                 <Mail size={20} />
               </a>
               <a
-                href="https://linkedin.com/in/necromancer0912"
+                href="https://www.linkedin.com/in/necromancer/"
                 target="_blank"
                 rel="noopener noreferrer"
-                className={`p-3 rounded-xl transition-all hover:scale-110 border ${
-                  isDarkMode 
-                    ? 'glass hover:bg-white/10 text-slate-400 hover:text-cyan-400 border-slate-700/50 hover:border-cyan-400/50' 
+                className={`p-3 rounded-xl transition-all hover:scale-110 border ${isDarkMode
+                    ? 'glass hover:bg-white/10 text-slate-400 hover:text-cyan-400 border-slate-700/50 hover:border-cyan-400/50'
                     : 'bg-white text-slate-600 hover:text-cyan-600 border-slate-300 hover:border-cyan-500 shadow-md hover:shadow-lg'
-                }`}
+                  }`}
               >
                 <Linkedin size={20} />
               </a>
@@ -303,7 +294,7 @@ export function Hero({ isDarkMode }: HeroProps) {
                     <span className="text-slate-600">:</span>
                     <span className="text-purple-400">~</span>
                     <span className="text-slate-500">$</span>
-                    <motion.span 
+                    <motion.span
                       className="inline-block w-2 h-4 bg-cyan-400 ml-1"
                       animate={{ opacity: [1, 0, 1] }}
                       transition={{ duration: 1, repeat: Infinity }}
@@ -328,7 +319,7 @@ export function Hero({ isDarkMode }: HeroProps) {
                   ease: "easeInOut"
                 }}
               >
-                <span className="text-purple-400">const</span> <span className="text-blue-400">skills</span> = 
+                <span className="text-purple-400">const</span> <span className="text-blue-400">skills</span> =
                 <span className="text-cyan-400"> "AI/ML"</span>;
               </motion.div>
 
@@ -345,7 +336,7 @@ export function Hero({ isDarkMode }: HeroProps) {
                   delay: 1
                 }}
               >
-                <span className="text-emerald-400">{"{ passion:"}</span> 
+                <span className="text-emerald-400">{"{ passion:"}</span>
                 <span className="text-yellow-400"> "coding" </span>
                 <span className="text-emerald-400">{"}"}</span>
               </motion.div>

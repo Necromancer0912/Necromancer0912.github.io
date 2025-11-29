@@ -1,7 +1,7 @@
 import { useState, useEffect, useRef } from 'react';
 import { motion, AnimatePresence } from 'motion/react';
 import { Terminal, X, Minus, Maximize2 } from 'lucide-react';
-import terminalIcon from 'figma:asset/e12404a06664737fa96322b17c50282cbce8c016.png';
+import terminalIcon from '../assets/Terminalicon2.png';
 
 interface InteractiveTerminalProps {
   isDarkMode: boolean;
@@ -135,7 +135,7 @@ export function InteractiveTerminal({ isDarkMode }: InteractiveTerminalProps) {
 
   const executeCommand = (cmd: string) => {
     const trimmedCmd = cmd.trim();
-    
+
     if (!trimmedCmd) return;
 
     setHistory(prev => [...prev, { type: 'command', content: `$ ${trimmedCmd}` }]);
@@ -352,7 +352,7 @@ export function InteractiveTerminal({ isDarkMode }: InteractiveTerminalProps) {
                 <div className="text-cyan-400">📄 contact.txt</div>
                 <div>📧 Email: sayan21593@iiitd.ac.in</div>
                 <div>🐙 GitHub: github.com/Necromancer0912</div>
-                <div>💼 LinkedIn: linkedin.com/in/sayan-das-iiitd</div>
+                <div>💼 LinkedIn: linkedin.com/in/necromancer</div>
               </div>
             )
           }]);
@@ -396,13 +396,13 @@ export function InteractiveTerminal({ isDarkMode }: InteractiveTerminalProps) {
           content: (
             <div className="text-xs text-blue-400 animate-fadeIn">
               Opening LinkedIn profile...
-              <a href="https://www.linkedin.com/in/sayan-das-iiitd" target="_blank" rel="noopener noreferrer" className="ml-2 underline">
-                linkedin.com/in/sayan-das-iiitd
+              <a href="https://www.linkedin.com/in/necromancer/" target="_blank" rel="noopener noreferrer" className="ml-2 underline">
+                linkedin.com/in/necromancer
               </a>
             </div>
           )
         }]);
-        setTimeout(() => window.open('https://www.linkedin.com/in/sayan-das-iiitd', '_blank'), 500);
+        setTimeout(() => window.open('https://www.linkedin.com/in/necromancer/', '_blank'), 500);
         break;
 
       case 'email':
@@ -430,10 +430,10 @@ export function InteractiveTerminal({ isDarkMode }: InteractiveTerminalProps) {
           type: 'output',
           content: (
             <div className="text-xs text-cyan-400 animate-fadeIn">
-              {new Date().toLocaleString('en-US', { 
-                weekday: 'long', 
-                year: 'numeric', 
-                month: 'long', 
+              {new Date().toLocaleString('en-US', {
+                weekday: 'long',
+                year: 'numeric',
+                month: 'long',
                 day: 'numeric',
                 hour: '2-digit',
                 minute: '2-digit',
@@ -488,7 +488,7 @@ export function InteractiveTerminal({ isDarkMode }: InteractiveTerminalProps) {
           content: (
             <div className="text-xs font-mono animate-fadeIn">
               <pre className="text-cyan-400">
-{`
+                {`
   ███████╗ █████╗ ██╗   ██╗ █████╗ ███╗   ██╗
   ██╔════╝██╔══██╗╚██╗ ██╔╝██╔══██╗████╗  ██║
   ███████╗███████║ ╚████╔╝ ███████║██╔██╗ ██║
@@ -524,9 +524,9 @@ export function InteractiveTerminal({ isDarkMode }: InteractiveTerminalProps) {
         break;
 
       default:
-        setHistory(prev => [...prev, { 
-          type: 'output', 
-          content: `Command not found: ${command}. Type 'help' for available commands.` 
+        setHistory(prev => [...prev, {
+          type: 'output',
+          content: `Command not found: ${command}. Type 'help' for available commands.`
         }]);
     }
 
@@ -567,9 +567,9 @@ export function InteractiveTerminal({ isDarkMode }: InteractiveTerminalProps) {
         whileHover={{ scale: 1.1 }}
         whileTap={{ scale: 0.95 }}
       >
-        <img 
-          src={terminalIcon} 
-          alt="Terminal" 
+        <img
+          src={terminalIcon}
+          alt="Terminal"
           className="w-full h-full object-contain drop-shadow-2xl"
         />
         <motion.div
@@ -596,17 +596,15 @@ export function InteractiveTerminal({ isDarkMode }: InteractiveTerminalProps) {
             className="w-[700px] max-w-[90vw]"
             onMouseDown={handleMouseDown}
           >
-            <div className={`rounded-xl overflow-hidden border shadow-2xl ${
-              isDarkMode 
-                ? 'glass-strong border-slate-700/50 shadow-cyan-500/20' 
-                : 'bg-white/95 border-slate-300 shadow-slate-500/20'
-            }`}>
-              {/* Terminal header */}
-              <div className={`terminal-header px-4 py-3 flex items-center justify-between border-b cursor-move ${
-                isDarkMode 
-                  ? 'bg-slate-900/90 border-slate-700/50' 
-                  : 'bg-slate-100 border-slate-200'
+            <div className={`rounded-xl overflow-hidden border shadow-2xl ${isDarkMode
+              ? 'glass-strong border-slate-700/50 shadow-cyan-500/20'
+              : 'bg-white/95 border-slate-300 shadow-slate-500/20'
               }`}>
+              {/* Terminal header */}
+              <div className={`terminal-header px-4 py-3 flex items-center justify-between border-b cursor-move ${isDarkMode
+                ? 'bg-slate-900/90 border-slate-700/50'
+                : 'bg-slate-100 border-slate-200'
+                }`}>
                 <div className="flex gap-2">
                   <button onClick={() => setIsOpen(false)} className="w-3 h-3 rounded-full bg-red-500 hover:bg-red-600 transition-colors" />
                   <button className="w-3 h-3 rounded-full bg-yellow-500 hover:bg-yellow-600 transition-colors" />
@@ -616,7 +614,7 @@ export function InteractiveTerminal({ isDarkMode }: InteractiveTerminalProps) {
                   <Terminal size={14} className={isDarkMode ? 'text-cyan-400' : 'text-cyan-600'} />
                   <span className={`text-xs font-mono ${isDarkMode ? 'text-slate-400' : 'text-slate-600'}`}>sayan@portfolio ~ zsh</span>
                 </div>
-                <button 
+                <button
                   onClick={() => setIsOpen(false)}
                   className={`transition-colors ${isDarkMode ? 'text-slate-400 hover:text-white' : 'text-slate-600 hover:text-slate-900'}`}
                 >
@@ -626,7 +624,7 @@ export function InteractiveTerminal({ isDarkMode }: InteractiveTerminalProps) {
 
               {/* Terminal content */}
               <div className={`p-4 font-mono text-sm ${isDarkMode ? 'bg-slate-950/95' : 'bg-white'}`}>
-                <div 
+                <div
                   ref={outputRef}
                   className="space-y-2 mb-4 max-h-[400px] overflow-y-auto scrollbar-thin scrollbar-thumb-slate-700 scrollbar-track-transparent"
                 >

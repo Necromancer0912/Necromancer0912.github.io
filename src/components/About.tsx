@@ -1,7 +1,7 @@
 import { motion } from 'motion/react';
 import { Calendar, Award, Code, Zap, Terminal } from 'lucide-react';
 import { ImageWithFallback } from './figma/ImageWithFallback';
-import profileImage from 'figma:asset/4a00ac9309428dcfaeba79b9609d2a19b4cf71da.png';
+import profileImage from '../assets/image.png';
 
 interface AboutProps {
   isDarkMode: boolean;
@@ -51,7 +51,7 @@ export function About({ isDarkMode }: AboutProps) {
       {/* Background effects */}
       <div className="absolute top-20 right-0 w-96 h-96 bg-indigo-500/10 rounded-full blur-[120px]" />
       <div className="absolute bottom-20 left-0 w-96 h-96 bg-cyan-500/10 rounded-full blur-[120px]" />
-      
+
       <div className="max-w-7xl mx-auto relative z-10">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -83,21 +83,19 @@ export function About({ isDarkMode }: AboutProps) {
                 </motion.div>
 
                 {/* Profile container with terminal styling */}
-                <motion.div 
-                  className={`relative rounded-2xl overflow-hidden border ${
-                    isDarkMode 
-                      ? 'glass-strong border-slate-700/50' 
-                      : 'bg-white/90 shadow-xl border-slate-200'
-                  }`}
+                <motion.div
+                  className={`relative rounded-2xl overflow-hidden border ${isDarkMode
+                    ? 'glass-strong border-slate-700/50'
+                    : 'bg-white/90 shadow-xl border-slate-200'
+                    }`}
                   whileHover={{ scale: 1.02 }}
                   transition={{ duration: 0.3 }}
                 >
                   {/* Terminal header bar */}
-                  <div className={`px-4 py-2 flex items-center justify-between border-b ${
-                    isDarkMode 
-                      ? 'bg-slate-900/80 border-slate-700/50' 
-                      : 'bg-slate-50 border-slate-200'
-                  }`}>
+                  <div className={`px-4 py-2 flex items-center justify-between border-b ${isDarkMode
+                    ? 'bg-slate-900/80 border-slate-700/50'
+                    : 'bg-slate-50 border-slate-200'
+                    }`}>
                     <div className="flex gap-1.5">
                       <div className="w-2.5 h-2.5 rounded-full bg-red-500" />
                       <div className="w-2.5 h-2.5 rounded-full bg-yellow-500" />
@@ -126,11 +124,11 @@ export function About({ isDarkMode }: AboutProps) {
                           backgroundSize: '100% 50px',
                         }}
                       />
-                      
+
                       {/* Gradient overlay */}
                       <div className="absolute inset-0 bg-gradient-to-br from-indigo-500/10 via-transparent to-cyan-500/10 z-10" />
-                      
-                      <img 
+
+                      <img
                         src={profileImage}
                         alt="Sayan Das - Developer"
                         className="w-full h-full object-cover transform group-hover:scale-105 transition-transform duration-500"
@@ -144,9 +142,8 @@ export function About({ isDarkMode }: AboutProps) {
                     </div>
 
                     {/* Info bar */}
-                    <div className={`mt-4 p-3 rounded-lg font-mono text-xs ${
-                      isDarkMode ? 'bg-slate-900/50' : 'bg-slate-100'
-                    }`}>
+                    <div className={`mt-4 p-3 rounded-lg font-mono text-xs ${isDarkMode ? 'bg-slate-900/50' : 'bg-slate-100'
+                      }`}>
                       <div className={`flex justify-between ${isDarkMode ? 'text-slate-400' : 'text-slate-600'}`}>
                         <span>Status: <span className={isDarkMode ? 'text-emerald-400' : 'text-emerald-600'}>● Active</span></span>
                         <span className={isDarkMode ? 'text-cyan-400' : 'text-cyan-600'}>Developer</span>
@@ -171,24 +168,21 @@ export function About({ isDarkMode }: AboutProps) {
                       viewport={{ once: true }}
                       transition={{ delay: 0.3 + index * 0.1 }}
                       whileHover={{ scale: 1.05, y: -5 }}
-                      className={`backdrop-blur-xl bg-gradient-to-br rounded-xl p-4 text-center border group cursor-pointer relative overflow-hidden transition-all ${
-                        isDarkMode 
-                          ? 'from-cyan-500/10 to-indigo-500/10 hover:from-cyan-500/15 hover:to-indigo-500/15 border-slate-700/50 hover:border-cyan-400/40 hover:shadow-glow-cyan' 
-                          : 'from-cyan-500/5 to-indigo-500/5 hover:from-cyan-500/10 hover:to-indigo-500/10 border-slate-300 hover:border-cyan-500/50 shadow-md hover:shadow-lg'
-                      }`}
+                      className={`backdrop-blur-xl bg-gradient-to-br rounded-xl p-4 text-center border group cursor-pointer relative overflow-hidden transition-all ${isDarkMode
+                        ? 'from-cyan-500/10 to-indigo-500/10 hover:from-cyan-500/15 hover:to-indigo-500/15 border-slate-700/50 hover:border-cyan-400/40 hover:shadow-glow-cyan'
+                        : 'from-cyan-500/5 to-indigo-500/5 hover:from-cyan-500/10 hover:to-indigo-500/10 border-slate-300 hover:border-cyan-500/50 shadow-md hover:shadow-lg'
+                        }`}
                     >
                       {/* Hover gradient effect */}
                       <motion.div
-                        className={`absolute inset-0 bg-gradient-to-br opacity-0 group-hover:opacity-100 transition-opacity ${
-                          isDarkMode ? 'from-indigo-500/10 to-cyan-500/10' : 'from-indigo-500/5 to-cyan-500/5'
-                        }`}
+                        className={`absolute inset-0 bg-gradient-to-br opacity-0 group-hover:opacity-100 transition-opacity ${isDarkMode ? 'from-indigo-500/10 to-cyan-500/10' : 'from-indigo-500/5 to-cyan-500/5'
+                          }`}
                       />
-                      
-                      <Icon size={20} className={`mx-auto mb-1.5 transition-colors relative z-10 ${
-                        isDarkMode 
-                          ? 'text-indigo-400 group-hover:text-cyan-400' 
-                          : 'text-indigo-600 group-hover:text-cyan-600'
-                      }`} />
+
+                      <Icon size={20} className={`mx-auto mb-1.5 transition-colors relative z-10 ${isDarkMode
+                        ? 'text-indigo-400 group-hover:text-cyan-400'
+                        : 'text-indigo-600 group-hover:text-cyan-600'
+                        }`} />
                       <p className={`text-xl font-display font-bold mb-0.5 relative z-10 ${isDarkMode ? 'text-white' : 'text-slate-900'}`}>{stat.value}</p>
                       <p className={`text-xs font-mono relative z-10 ${isDarkMode ? 'text-slate-400' : 'text-slate-600'}`}>{stat.label}</p>
                     </motion.div>
@@ -219,7 +213,7 @@ export function About({ isDarkMode }: AboutProps) {
               <h2 className="text-3xl md:text-4xl font-display font-bold text-white mb-6">
                 <span className="text-cyan-400">{'<'}</span>About<span className="text-cyan-400">{' />'}</span>
               </h2>
-              
+
               {/* Bio text with typing effect styling */}
               <div className="space-y-4 mb-10">
                 <motion.div
@@ -246,8 +240,8 @@ export function About({ isDarkMode }: AboutProps) {
                   transition={{ delay: 0.4 }}
                   className="text-base text-slate-400 leading-relaxed"
                 >
-                  I'm a passionate AI/ML researcher and developer currently pursuing my M.Tech at IIIT Delhi. 
-                  My work focuses on building intelligent systems that solve real-world problems, particularly 
+                  I'm a passionate AI/ML researcher and developer currently pursuing my M.Tech at IIIT Delhi.
+                  My work focuses on building intelligent systems that solve real-world problems, particularly
                   in medical imaging and natural language processing.
                 </motion.p>
 
@@ -258,7 +252,7 @@ export function About({ isDarkMode }: AboutProps) {
                   transition={{ delay: 0.5 }}
                   className="text-base text-slate-400 leading-relaxed"
                 >
-                  With published research in neural network modeling and extensive experience in PyTorch and 
+                  With published research in neural network modeling and extensive experience in PyTorch and
                   TensorFlow, I specialize in computer vision, deep learning, and multi-modal AI systems.
                 </motion.p>
               </div>
@@ -268,7 +262,7 @@ export function About({ isDarkMode }: AboutProps) {
                 <div className="font-mono text-xs text-slate-600 mb-3">
                   <span className="text-green-400">/** </span>Academic Journey <span className="text-green-400">**/</span>
                 </div>
-                
+
                 {timeline.map((item, index) => (
                   <motion.div
                     key={index}
@@ -280,7 +274,7 @@ export function About({ isDarkMode }: AboutProps) {
                     className="relative pl-6 border-l-2 border-cyan-500/30 group cursor-pointer"
                   >
                     {/* Animated dot */}
-                    <motion.div 
+                    <motion.div
                       className="absolute -left-[5px] top-2 w-2 h-2 rounded-full bg-cyan-500 group-hover:bg-indigo-400 transition-colors"
                       whileHover={{ scale: 1.3 }}
                     />

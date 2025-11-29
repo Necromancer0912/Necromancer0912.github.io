@@ -21,11 +21,10 @@ export function GitStatus({ isDarkMode = true }: GitStatusProps) {
       animate={{ opacity: isVisible ? 1 : 0, x: isVisible ? 0 : -20 }}
       className="fixed top-20 left-8 z-30 hidden xl:block"
     >
-      <div className={`backdrop-blur-xl rounded-lg px-3 py-2 border shadow-xl ${
-        isDarkMode 
-          ? 'bg-slate-900/80 border-slate-700/50' 
-          : 'bg-white/90 border-slate-300'
-      }`}>
+      <div className={`backdrop-blur-xl rounded-lg px-3 py-2 border shadow-xl ${isDarkMode
+        ? 'bg-slate-900/80 border-slate-700/50'
+        : 'bg-white/90 border-slate-300'
+        }`}>
         <div className="flex items-center gap-3">
           {/* Branch indicator */}
           <div className="flex items-center gap-1.5">
