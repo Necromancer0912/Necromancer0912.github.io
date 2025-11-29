@@ -1,7 +1,7 @@
 import { motion } from 'motion/react';
 import { Calendar, Award, Code, Zap, Terminal } from 'lucide-react';
 import { ImageWithFallback } from './figma/ImageWithFallback';
-import profileImage from '../assets/image.png';
+import profileImage from '../assets/Image.jpg';
 
 interface AboutProps {
   isDarkMode: boolean;

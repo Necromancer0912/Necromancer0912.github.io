@@ -1,7 +1,7 @@
 import { useState, useEffect } from 'react';
 import { Menu, X, Moon, Sun, Wifi, Activity, Cpu } from 'lucide-react';
 import { motion } from 'motion/react';
-import profileImage from '../assets/image.png';
+import profileImage from '../assets/Image.jpg';
 
 interface NavbarProps {
   isDarkMode: boolean;

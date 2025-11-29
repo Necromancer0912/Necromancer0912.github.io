@@ -47,14 +47,22 @@ export function InteractiveTerminal({ isDarkMode }: InteractiveTerminalProps) {
           type: 'output',
           content: (
             <div className="text-xs font-mono space-y-2 animate-fadeIn">
-              <div className="text-cyan-400">╔═══════════════════════════════════════════╗</div>
-              <div className="text-cyan-400">║  Welcome to Sayan's Interactive Terminal  ║</div>
-              <div className="text-cyan-400">╚═══════════════════════════════════════════╝</div>
-              <div className="text-slate-400 mt-2">
-                Type <span className="text-emerald-400">'help'</span> to see available commands
+              <div className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400 font-bold text-lg">
+                ╭─────────────────────────────────────────────╮
               </div>
-              <div className="text-slate-500 text-xs">
-                💡 Use ↑/↓ arrows to navigate command history
+              <div className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400 font-bold text-lg">
+                │  ⚡ Welcome to Sayan's Terminal v3.0 ⚡  │
+              </div>
+              <div className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400 font-bold text-lg">
+                ╰─────────────────────────────────────────────╯
+              </div>
+              <div className="text-slate-400 mt-3 flex items-center gap-2">
+                <span className="text-emerald-400">➜</span>
+                Type <span className="text-cyan-400 font-bold">'help'</span> to see available commands
+              </div>
+              <div className="text-slate-500 text-xs flex items-center gap-2">
+                <span className="text-purple-400">💡</span>
+                Use <span className="text-purple-400">↑/↓</span> arrows to navigate command history
               </div>
             </div>
           )
